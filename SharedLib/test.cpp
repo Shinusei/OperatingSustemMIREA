@@ -4,7 +4,7 @@
 
 int main() {
     char key[] = "secret_key";
-    char data[] = "Hello, World!!";
+    char data[] = "Hello, World!";
     std::vector<char> encrypted;
 
     set_key(key, sizeof(key) - 1);
