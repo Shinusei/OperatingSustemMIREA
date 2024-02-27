@@ -1,0 +1,10 @@
+{
+    "cmake.configureOnOpen": true,
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/aleksey/Code/OS",
+            "binaryPath": "/home/aleksey/Code/OS/test",
+            "binaryArgs": []
+        }
+    ]
+}
