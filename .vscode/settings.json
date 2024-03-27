@@ -6,5 +6,9 @@
             "binaryPath": "/home/aleksey/Code/OS/test",
             "binaryArgs": []
         }
-    ]
+    ],
+    "files.associations": {
+        "iosfwd": "cpp",
+        "*.so": "cpp"
+    }
 }

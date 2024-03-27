@@ -3,14 +3,14 @@
 
 class RC4 {
 private:
-    unsigned char S[256];
+    char S[256];
     int i;
     int j;
 
 public:
     RC4();
-    int key(unsigned char* key, int len);
-    unsigned char prga();
+    int key(char* key, int len);
+    char prga();
     void reset();
 };
 

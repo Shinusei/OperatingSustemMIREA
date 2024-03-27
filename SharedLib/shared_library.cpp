@@ -4,10 +4,10 @@
 RC4 rc4;
 
 int set_key(char* key, int len) {
-    return rc4.key(reinterpret_cast<unsigned char*>(key), len);
+    return rc4.key(reinterpret_cast<char*>(key), len);
 }
 
-unsigned char g(void) {
+char g(void) {
     return rc4.prga();
 }
 

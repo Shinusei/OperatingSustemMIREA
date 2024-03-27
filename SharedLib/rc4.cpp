@@ -9,16 +9,16 @@ RC4::RC4() {
     }
 }
 
-int RC4::key(unsigned char* key, int len) {
+int RC4::key(char* key, int len) {
     int j = 0;
     for (int i = 0; i < 256; ++i) {
-        j = (j + S[i] + static_cast<unsigned char>(key[i % len])) % 256;
+        j = (j + S[i] + static_cast<char>(key[i % len])) % 256;
         std::swap(S[i], S[j]);
     }
     return 1;
 }
 
-unsigned char RC4::prga() {
+char RC4::prga() {
     i = (i + 1) % 256;
     j = (j + S[i]) % 256;
     std::swap(S[i], S[j]);
