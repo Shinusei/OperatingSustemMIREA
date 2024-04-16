@@ -201,8 +201,12 @@ int main(int argc, char *argv[]) {
             
             encrypt_message((unsigned char *)message, strlen(message), key, keylen);
 
-            printf("Зашифрованное сообщение: %s", message);
+            printf("Зашифрованное сообщение:%s", message);
+            /* for(int i = 0; i < 12; i++){
+                printf("%S\n", message[i]+48);
+            } */
         }
+
     }
     free(data);
     return 0;
