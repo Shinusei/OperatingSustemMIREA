@@ -1,13 +1,13 @@
+#    g++ -c -o lib.o rc4.cpp
+#	g++ -shared -o librc4.so lib.o
+# Определим имена файлов
 
-test: test.o libprint.so 
-	gcc -lstdc++ test.cpp -L. -lprint -o test -I.
+# Обязательно прописать export LD_LIBRARY_PATH=$PWD
+make:
+	g++ -Wall -Wextra -O2 -c -o rc4.o rc4.cpp -fPIC
+	g++ -Wall -Wextra -O2 -shared -o rc4.so rc4.o
+	g++ -Llib/ -Wall -Wextra -O2 -o main main.cpp rc4.so
 
-libprint.so:
-	gcc -c -fPIC rc4.cpp shared_library.cpp
-	gcc -shared -o libprint.so rc4.o shared_library.o
-
+# Чистка
 clean:
-	rm *.o *.so test output.txt
-
-
-#launch by: LD_LIBRARY_PATH=. ./test
+	rm -f *.o *.so
