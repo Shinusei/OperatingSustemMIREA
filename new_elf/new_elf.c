@@ -166,7 +166,7 @@ static int ges64(char* sname, void* data, int len, off_t *off, int *size)
 
 
 int main(int argc, char *argv[]) {
-    char* data;
+    unsigned char* data;
     int fd;
     struct stat st;
     off_t offset;
@@ -195,7 +195,7 @@ int main(int argc, char *argv[]) {
         } else {
             printf("Offset = %lu; Size = %u\n", offset, size);
 
-            char message[] = "Hello, world\n";
+            unsigned char message[] = "Hello, world\n";
             unsigned char key[] = "IKBO_25_22";
             size_t keylen = strlen(key);
             

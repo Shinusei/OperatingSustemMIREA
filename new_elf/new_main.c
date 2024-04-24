@@ -37,7 +37,7 @@ unsigned char rc4_output(unsigned char *state, size_t *i, size_t *j) {
 }
 
 int main(int argc, char *argv[]) {
-    unsigned char text[] = " �p�����&��";
+    unsigned char text[] = "Hello, world";
     unsigned char key[] = "IKBO_25_22";
     unsigned char state[256];
     size_t keylen = strlen(key);
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
         ptr++;
     }
     
-    char decrypted_string[100];
+    unsigned char decrypted_string[100];
     
     strncpy(decrypted_string, &upx_start, sizeof(decrypted_string));
     decrypted_string[sizeof(decrypted_string) - 1] = '\0';
